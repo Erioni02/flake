@@ -137,7 +137,7 @@ export function ProductViewer({ product, initialColor, onClose }: ProductViewerP
   return (
     <>
       <motion.div
-        className="fixed inset-0 z-[70] bg-black/75 backdrop-blur-md"
+        className="fixed inset-0 z-[70] bg-black md:bg-black/75 md:backdrop-blur-md"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -146,7 +146,7 @@ export function ProductViewer({ product, initialColor, onClose }: ProductViewerP
         aria-hidden="true"
       />
 
-      <div className="pointer-events-none fixed inset-0 z-[71] flex md:items-center md:justify-center md:p-6">
+      <div className="pointer-events-none fixed inset-0 z-[71] flex bg-black md:items-center md:justify-center md:bg-transparent md:p-6">
         <motion.div
           ref={dialogRef}
           role="dialog"
@@ -363,7 +363,7 @@ export function ProductViewer({ product, initialColor, onClose }: ProductViewerP
 
           {/* Mobile: the order action stays within thumb reach. */}
           {step === "details" && (
-            <div className="pb-safe absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-black via-black/90 to-transparent px-4 pt-8 md:hidden">
+            <div className="pb-safe absolute inset-x-0 bottom-0 z-30 bg-black px-4 pt-3 before:pointer-events-none before:absolute before:inset-x-0 before:bottom-full before:h-10 before:bg-gradient-to-t before:from-black before:to-transparent before:content-[''] md:hidden">
               <OrderButton quantity={quantity} onClick={startOrder} />
             </div>
           )}
