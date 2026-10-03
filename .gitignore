@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+
+# Original high-res source photos — the site serves optimised copies from public/
+clothes/
+flakeshoots/
+
+# Local tooling
+.claude/
